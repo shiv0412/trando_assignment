@@ -65,10 +65,14 @@ const Menu = () => {
         <Row className="row">
           <OptionsContainer className="col-10">
             <Curosal autoPlay={false} responsive={responsive}>
-              {options.map((option) => {
+              {options.map((option, index) => {
                 return (
                   <>
-                    <MenuOption icon={option.icon} text={option.text} />
+                    <MenuOption
+                      key={index}
+                      icon={option.icon}
+                      text={option.text}
+                    />
                   </>
                 );
               })}

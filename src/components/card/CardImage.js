@@ -53,10 +53,10 @@ const CardImage = (props) => {
           showDots={true}
           arrows={false}
         >
-          {props.itemImages.map((itemImage) => {
+          {props.itemImages.map((itemImage,index) => {
             return (
               <>
-                <img src={itemImage} alt=""></img>
+                <img key={index} src={itemImage} alt=""></img>
               </>
             );
           })}
